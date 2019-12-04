@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>	
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+	<link href='styles/mef.css' rel='stylesheet' type='text/css' />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Formulaire JS</title>
+	<script language="javascript" type="text/javascript">
+
+		var b_pseudo=false; 
+		var b_nom=false; 
+		var b_prenom=false; 
+		var b_date=false; 
+		var b_mail=false; 
+		var b_mp=false;
+		var b_sexe=false;
+		// fonction envoyer pour le bouton submit, conditions de tout le formulaire
+		function envoyer(){
+			if(b_pseudo==true && b_nom==true && b_prenom==true && b_date==true && b_mail==true && b_mp==true && b_sexe==true){
+				document.getElementById("message").innerText="envoi serveur"; //si toutes les conditions sont remplies, on va selectionner l'emplacement message et lui changer sa propriété text'innerText'
+				document.getElementById('inscription').submit(); 
+				// pour valider le formulaire avec la propriété submit
+			}else{
+				document.getElementById("message").innerText="Le formulaire n'est pas complet"; 
+				// si toutes les conditions ne sont pas remplies, on va selectionner l'emplacement message et lui changer sa propriété text'innerText'
+			}
+		
+			// document.getElementById("message").innerText += "-" + b_pseudo + "-" + b_nom + "-" + b_prenom + "-" + b_date + "-" + b_mail + "-" + b_mp + "-" + b_sexe; //pour tester chaque booléènne au fur et à mesure
+		}
+		</script>
+		<script language="javascript" src="js/v_inscr.js"></script>
+</head>
+<body>
+<div id="conteneur">
+	<div class="titre_page"><h1>PAGE INSCRIPTION</h1></div>
+
+		<div id="message">
+		Tous les champs sont obligatoires
+		</div>
+		<form id="inscription" name="inscription" method="post" action="formulaire-inscription.html">
+			<div class="div_input_form">
+				<input type="text" name="pseudo" id="pseudo" maxlength="50" class="input_form" value='Votre pseudo' onclick="saisie('Votre pseudo',this.id)" onmouseout="retablir('Votre pseudo',this.id)" onblur="mev('Votre pseudo',this.id)" />
+			</div>					
+			<div class="div_input_form">
+				<input type="text" name="nom" id="nom" maxlength="50" class="input_form" value='Votre nom' onclick="saisie('Votre nom',this.id)" onmouseout="retablir('Votre nom',this.id)" onblur="mev('Votre nom',this.id)"/>
+			</div>
+			<div class="div_input_form">
+				<input type="text" name="prenom" id="prenom" maxlength="50" class="input_form" value='Votre prénom'  onclick="saisie('Votre prénom',this.id)" onmouseout="retablir('Votre prénom',this.id)" onblur="mev('Votre prénom',this.id)"/>
+			</div>
+			<div class="div_input_form">
+				<input type="date" name="date_n" id="date_n" min="1900-01-01" value='' onclick="saisie('',this.id)" onmouseout="retablir('',this.id)" onblur="mev('',this.id)" />	
+			</div>
+			<div class="div_input_form">
+				<input type="text" name="mail_inscr" id="mail_inscr" maxlength="150" class="input_form" value='Votre mail' onclick="saisie('Votre mail',this.id)" onmouseout="retablir('Votre mail',this.id)" onblur="mev('Votre mail',this.id)" />
+			</div>
+			<div class="div_input_form">
+				<input type="text" name="cmail_inscr" id="cmail_inscr" maxlength="150" class="input_form" value='Confirmer le mail' onclick="saisie('Confirmer le mail',this.id)" onmouseout="retablir('Confirmer le mail',this.id)" onblur="mev('Confirmer le mail',this.id)" />
+			</div>
+			<div class="div_input_form">
+			<div id="label">Votre mot de passe : entre 5 et 10 caractères<br />
+				<input type="password" name="mp_inscr" id="mp_inscr" maxlength="10" class="input_form" value="Mot de passe" onclick="saisie('Mot de passe',this.id)" onmouseout="retablir('Mot de passe',this.id)" onblur="mev('Mot de passe',this.id)" />
+			</div> 
+			</div>
+			<div class="div_input_form">
+			<div id="label">Confirmer le mot de passe :<br />
+				<input type="password" name="mp_conf" id="mp_conf" maxlength="10" class="input_form" value="Confirmer MP" onclick="saisie('Confirmer MP',this.id)" onmouseout="retablir('Confirmer MP',this.id)" onblur="mev('Confirmer MP',this.id)" />
+			</div>
+			</div>
+			<div class="div_input_form">
+				<select id="sexe" name="sexe" onChange='Javascript:if(this.value>0){ b_sexe=true; } else { b_sexe=false; }'>
+					<option value="0">Sexe</option>
+					<option value="1">Femme</option>
+					<option value="2">Homme</option>
+				</select>
+			</div>							
+			<div class="div_input_form">
+				<input type="button" name="valid_inscr" id="valid_inscr" class="input_form" value="Valider" onclick="envoyer()"/> 
+			<!-- on appelle avec onClick la fonction JS envoyer sans oublier les parentheses -->
+			</div>	
+		</form>		
+</div>	
+						
+</body>
+
+</html>
+	

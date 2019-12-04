@@ -1,0 +1,141 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+body {
+	margin:0px;
+	padding:0px;
+	/*background:#FFFFFF;
+	background-repeat:repeat-x;*/
+	width:100%;
+    font-family: 'Amatic SC', cursive;
+	font-size:10px;
+	color:#666666;
+	background-color:#EDEEEE;
+	background-image:url(../images/font.jpg);
+	background-attachment: fixed;
+}
+
+h1{
+    font-family: 'Patrick Hand', cursive;
+	font-size:30px;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+#conteneur{
+	background: honeydew;
+	margin-left: 20%;
+	margin-right: 20%;
+	border-radius: 2%;
+}
+
+
+select{
+	width:250px;
+	height:30px;
+	/*Coins arrondis*/
+	border:#333 1px solid;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 5px;
+	text-align:left;
+	padding-left:5px;
+	font-size:18px;
+	background-color:#fff;
+	color: teal;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+input{
+	width:250px;
+	height:30px;
+	border:#333 1px solid;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 5px;
+	text-align:left;
+	padding-left:5px;
+	font-size:16px;
+	background-color:#fff;
+	color: teal;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+input[type="button"]{
+	 height:50px;
+	 font-weight:bold;
+     color: #EDEEEE;
+	 font-weight:bold;
+     background: #444;
+     background: linear-gradient( #555, #2C2C2C);
+	 text-shadow: 0px 1px 0px white;
+	 text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.4);
+     box-shadow: 0 0 10px rgba( 0, 0, 0, 0.8),
+                 0 -1px 0 rgba( 255, 255, 255, 0.6);	
+	
+	box-shadow: 2px 2px 0px #aaa;
+	font-size:24px;
+	text-align:center;	
+	padding-left:0px;
+	margin-top:20px;
+}
+
+input[type="button"]:hover{
+	cursor:pointer;
+	box-shadow: 6px 6px 0px #aaa;
+}
+
+
+#message{
+	width:auto;
+	border:3mm ridge rosybrown ;
+	height:40px;
+	text-align:center;
+	padding-top: 2%;
+	font-size:15px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:5px;
+	border-radius: 5px;
+	margin-bottom:20px;
+}
+
+#centre{
+	position:relative;
+	float:left;
+	width:640px;
+	height:375px;
+	left:70px;
+	z-index:1;
+}
+
+.div_input_form{
+	display: inline-flex;
+	padding-left:80px;
+	padding-bottom:15px;
+	padding-top:30px;
+	text-align:left;
+}
+
+.titre_page{
+	width:auto;
+	padding-top:18px;
+	height:42px;
+	font-family: 'Amatic SC', cursive;
+	color:#FFFFFF;
+	text-align:center;
+	background:rgb(131, 127, 127);
+	background-repeat:no-repeat;
+	background-color:#666666;
+	padding-right:10px;
+	border-radius: 2%;
+}
+
+#label{
+	display: block;
+	font-size: 20px;
+}
+
