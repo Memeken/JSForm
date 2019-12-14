@@ -2,11 +2,10 @@
 	margin:0px;
 	padding:0px;
 }
+
 body {
 	margin:0px;
 	padding:0px;
-	/*background:#FFFFFF;
-	background-repeat:repeat-x;*/
 	width:100%;
     font-family: 'Amatic SC', cursive;
 	font-size:10px;
@@ -30,11 +29,9 @@ h1{
 	border-radius: 2%;
 }
 
-
 select{
 	width:250px;
 	height:30px;
-	/*Coins arrondis*/
 	border:#333 1px solid;
 	-moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -49,6 +46,7 @@ select{
 }
 
 input{
+	font-family: 'Amatic SC', cursive;
 	width:250px;
 	height:30px;
 	border:#333 1px solid;
@@ -65,17 +63,16 @@ input{
 }
 
 input[type="button"]{
-	 height:50px;
-	 font-weight:bold;
-     color: #EDEEEE;
-	 font-weight:bold;
-     background: #444;
-     background: linear-gradient( #555, #2C2C2C);
-	 text-shadow: 0px 1px 0px white;
-	 text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.4);
-     box-shadow: 0 0 10px rgba( 0, 0, 0, 0.8),
-                 0 -1px 0 rgba( 255, 255, 255, 0.6);	
-	
+	height:50px;
+	font-weight:bold;
+	color: #EDEEEE;
+	font-weight:bold;
+	background: #444;
+	background: linear-gradient( #555, #2C2C2C);
+	text-shadow: 0px 1px 0px white;
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.4);
+	box-shadow: 0 0 10px rgba( 0, 0, 0, 0.8),
+				0 -1px 0 rgba( 255, 255, 255, 0.6);	
 	box-shadow: 2px 2px 0px #aaa;
 	font-size:24px;
 	text-align:center;	
@@ -83,11 +80,14 @@ input[type="button"]{
 	margin-top:20px;
 }
 
+select{
+	font-family: 'Amatic SC', cursive;
+}
+
 input[type="button"]:hover{
 	cursor:pointer;
 	box-shadow: 6px 6px 0px #aaa;
 }
-
 
 #message{
 	width:auto;
@@ -95,7 +95,7 @@ input[type="button"]:hover{
 	height:40px;
 	text-align:center;
 	padding-top: 2%;
-	font-size:15px;
+	font-size:30px;
 	margin-left:20px;
 	margin-right:20px;
 	margin-top:5px;
@@ -129,7 +129,7 @@ input[type="button"]:hover{
 	text-align:center;
 	background:rgb(131, 127, 127);
 	background-repeat:no-repeat;
-	background-color:#666666;
+	background-color:#345764;
 	padding-right:10px;
 	border-radius: 2%;
 }
@@ -138,4 +138,3 @@ input[type="button"]:hover{
 	display: block;
 	font-size: 20px;
 }
-
