@@ -40,7 +40,7 @@ function mev(txt_defaut,nom_controle){
       button.style.border ='#CC3300 2px solid';
       alert("Cette adresse mail est déjà utilisée");
     }else{
-      msg.innerText =" ";
+      msg.innerText ="";
       button.style.border='#333 1px solid';
       // b_mail=true on ne le met pas pour que le bouton soit valide que lorsque que le mail est confirmé
     }
@@ -156,11 +156,14 @@ function validateAge(){
   var AY = today.getFullYear() - bthDate.getFullYear();
   var AM = today.getMonth() - bthDate.getMonth();
   var AD = today.getDay() - bthDate.getDay();
+  var day = today.getDay();
 
   if(AY>18){
       return true;
   }else if(AY===18 && AM===0 && AD>=0){
-      return true;        
+      return true;
+  }else if(AY===18 && AM===0 && AD===1){
+      return false;        
   }else{
       return false;
   }

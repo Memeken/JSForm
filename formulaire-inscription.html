@@ -20,7 +20,9 @@
 		// fonction envoyer pour le bouton submit, conditions de tout le formulaire
 		function envoyer(){
 			if(b_pseudo==true && b_nom==true && b_prenom==true && b_date==true && b_mail==true && b_mp==true && b_sexe==true){
-				document.getElementById("message").innerText="envoi serveur"; //si toutes les conditions sont remplies, on va selectionner l'emplacement message et lui changer sa propriété text'innerText'
+				document.getElementById("message").innerText="envoi serveur"; 
+				alert("envoi serveur");
+				//si toutes les conditions sont remplies, on va selectionner l'emplacement message et lui changer sa propriété text'innerText'
 				document.getElementById('inscription').submit(); 
 				// pour valider le formulaire avec la propriété submit
 			}else{
